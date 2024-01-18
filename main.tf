@@ -1,9 +1,11 @@
 resource "google_service_account" "default" {
-  account_id   = "my-custom-sa"
+  project = "upheld-rain-404605"
+  account_id   = "my-custo"
   display_name = "Custom SA for VM Instance"
 }
 
 resource "google_compute_instance" "default" {
+  project = "upheld-rain-404605"
   name         = "my-instance"
   machine_type = "n2-standard-2"
   zone         = "us-central1-a"
