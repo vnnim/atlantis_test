@@ -25,7 +25,7 @@ resource "google_compute_instance" "default" {
 
   boot_disk {
     initialize_params {
-      image = "projects/ubuntu-os-cloud/global/images/ubuntu-2204-jammy-v20221014"
+      image = "debian-cloud/debian-11"
       labels = {
         env = "dev"
       }
