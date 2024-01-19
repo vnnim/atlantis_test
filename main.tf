@@ -36,7 +36,7 @@ resource "google_compute_instance" "default" {
 }
 
 resource "google_storage_bucket" "auto-expire" {
-  project = "upheld-rain-404605"
+  project       = "upheld-rain-404605"
   name          = "no-public-access-bucket"
   location      = "US"
   force_destroy = true
