@@ -34,12 +34,3 @@ resource "google_compute_instance" "default" {
 
   metadata_startup_script = "echo hi > /test.txt"
 }
-
-resource "google_storage_bucket" "auto-expire" {
-  project = "upheld-rain-404605"
-  name          = "no-public-access-bucket"
-  location      = "US"
-  force_destroy = true
-
-  public_access_prevention = "enforced"
-}
