@@ -1,14 +1,3 @@
-terraform {
-  backend "gcs" {
-    bucket = "rfx-us-cl101pr-mav-122000099-fs1"
-  }
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "4.40.0"
-    }
-  }
-}
 
 provider "google" {
   project     = var.project
