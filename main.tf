@@ -38,3 +38,11 @@ resource "google_compute_instance" "default" {
     }
   }
 }
+resource "google_storage_bucket" "auto-expire" {
+  project     = var.project
+  name          = "no-public-access-bucket"
+  location      = "US"
+  force_destroy = true
+
+  public_access_prevention = "enforced"
+}
